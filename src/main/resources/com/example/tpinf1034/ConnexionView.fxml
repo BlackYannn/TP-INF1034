@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tpinf1034.ConnexionController">
+   <children>
+      <AnchorPane layoutX="194.0" layoutY="176.0" prefHeight="348.0" prefWidth="412.0">
+         <children>
+            <Label layoutX="32.0" layoutY="30.0" text="Nom d'utilisateur :">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="122.0" text="Mot de passe :">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField layoutX="113.0" layoutY="66.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <PasswordField layoutX="113.0" layoutY="159.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="161.0" layoutY="215.0" onMouseClicked="#handleForgotPassword" style="-fx-text-fill: blue; -fx-underline: true; -fx-cursor: hand;" text="Mot de passe oublier ?">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Button layoutX="157.0" layoutY="266.0" mnemonicParsing="false" onAction="#connecter" style="-fx-background-color: blue;" text="Se Connecter" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

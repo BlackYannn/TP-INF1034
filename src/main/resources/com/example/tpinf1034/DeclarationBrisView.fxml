@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tpinf1034.DeclarationBrisController">
+   <children>
+      <AnchorPane layoutX="32.0" layoutY="21.0" prefHeight="61.0" prefWidth="518.0">
+         <children>
+            <Label layoutX="24.0" layoutY="27.0" text="Date :" />
+            <DatePicker layoutX="70.0" layoutY="23.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="55.0" layoutY="83.0" text="Rapport émis par :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="32.0" layoutY="109.0" prefHeight="70.0" prefWidth="680.0">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" text="Nom :" />
+            <Label layoutX="225.0" layoutY="25.0" text="Prénom :" />
+            <Label layoutX="448.0" layoutY="25.0" text="Fonction :" />
+            <TextField layoutX="54.0" layoutY="21.0" />
+            <TextField layoutX="280.0" layoutY="21.0" />
+            <TextField layoutX="508.0" layoutY="21.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="36.0" layoutY="179.0" prefHeight="144.0" prefWidth="670.0">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" text="Numéro de police :" />
+            <Label layoutX="380.0" layoutY="14.0" text="Salle :" />
+            <Label layoutX="374.0" layoutY="82.0" text="Équipement : " />
+            <Label layoutX="29.0" layoutY="82.0" text="Immatriculation :" />
+            <TextField layoutX="22.0" layoutY="41.0" prefHeight="26.0" prefWidth="175.0" />
+            <TextField layoutX="374.0" layoutY="42.0" prefHeight="26.0" prefWidth="226.0" />
+            <TextField layoutX="23.0" layoutY="106.0" prefHeight="26.0" prefWidth="175.0" />
+            <TextField layoutX="373.0" layoutY="107.0" prefHeight="26.0" prefWidth="226.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="55.0" layoutY="323.0" prefHeight="111.0" prefWidth="639.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Photo : " />
+            <Label layoutX="268.0" layoutY="14.0" text="Description :" />
+            <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Joindre photo" />
+         </children>
+      </AnchorPane>
+      <TextArea layoutX="324.0" layoutY="357.0" prefHeight="62.0" prefWidth="360.0" />
+      <AnchorPane layoutX="55.0" layoutY="453.0" prefHeight="122.0" prefWidth="360.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Organisme : " />
+            <Label layoutX="190.0" layoutY="14.0" text="Nom employe : " />
+            <Label layoutX="14.0" layoutY="70.0" text="Numéro de tel :" />
+            <TextField layoutX="14.0" layoutY="32.0" />
+            <TextField layoutX="190.0" layoutY="32.0" />
+            <TextField layoutX="14.0" layoutY="88.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="55.0" layoutY="434.0" text="Contact :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="458.0" layoutY="434.0" text="Signature :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="474.0" layoutY="464.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField layoutY="1.0" />
+         </children></AnchorPane>
+      <Button layoutX="474.0" layoutY="589.0" mnemonicParsing="false" onAction="#annuler" text="Précédent">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="604.0" layoutY="589.0" mnemonicParsing="false" text="Enregistrer">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

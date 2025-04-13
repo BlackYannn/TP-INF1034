@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tpinf1034.GestionMedicamentsController">
+   <children>
+      <AnchorPane layoutX="42.0" layoutY="64.0" prefHeight="101.0" prefWidth="731.0">
+         <children>
+            <Label layoutX="29.0" layoutY="42.0" text="Identifiant :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="323.0" layoutY="42.0" text="Nom :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField layoutX="125.0" layoutY="42.0" />
+            <TextField layoutX="400.0" layoutY="42.0" />
+            <Button layoutX="613.0" layoutY="36.0" mnemonicParsing="false" text="Recherche">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="262.0" prefHeight="268.0" prefWidth="678.0">
+         <children>
+            <Label layoutX="96.0" layoutY="28.0" text="Nom :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="68.0" text="Catégorie :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="104.0" text="Forme :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="142.0" text="Quantité disponoble :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="178.0" text="Seuil minimum :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="215.0" text="Date d'expiration :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="32.0" opacity="0.4" text="Paracétamol">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="68.0" opacity="0.4" text="Analgique">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="104.0" opacity="0.4" text="Comprimé">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="142.0" opacity="0.4" text="1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="178.0" opacity="0.4" text="200">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="346.0" layoutY="215.0" opacity="0.4" text="12/2026">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="68.0" layoutY="205.0" text="Informations :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <AnchorPane layoutX="30.0" layoutY="597.0" prefHeight="74.0" prefWidth="754.0">
+         <children>
+            <Button layoutX="603.0" layoutY="19.0" onAction="#fermerFenetre" mnemonicParsing="false" text="Précident">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

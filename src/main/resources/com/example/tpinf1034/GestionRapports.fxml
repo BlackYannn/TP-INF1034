@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tpinf1034.GestionRapportsController">
+   <children>
+      <Label layoutX="92.0" layoutY="70.0" text="Information Général ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <AnchorPane layoutX="59.0" layoutY="91.0" prefHeight="132.0" prefWidth="682.0">
+         <children>
+            <Label layoutX="16.0" layoutY="28.0" text="ID Rapport :" />
+            <Label layoutX="17.0" layoutY="63.0" text="Date du Rapport :" />
+            <Label layoutX="18.0" layoutY="99.0" text="Nom :" />
+            <Label layoutX="341.0" layoutY="28.0" text="Nom de l'hopital:" />
+            <Label layoutX="343.0" layoutY="63.0" text="Service concerné :" />
+            <Label layoutX="343.0" layoutY="99.0" text="Fonction :" />
+            <TextField layoutX="138.0" layoutY="24.0" />
+            <TextField layoutX="139.0" layoutY="95.0" />
+            <TextField layoutX="489.0" layoutY="24.0" />
+            <TextField layoutX="490.0" layoutY="60.0" />
+            <TextField layoutX="491.0" layoutY="95.0" />
+            <DatePicker layoutX="138.0" layoutY="58.0" prefHeight="26.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="92.0" layoutY="257.0" text="Information du patient">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="59.0" layoutY="275.0" prefHeight="132.0" prefWidth="682.0">
+         <children>
+            <Label layoutX="16.0" layoutY="28.0" text="Nom complet :" />
+            <Label layoutX="17.0" layoutY="63.0" text="Date de naissance :" />
+            <Label layoutX="18.0" layoutY="99.0" text="Adresse :" />
+            <Label layoutX="341.0" layoutY="28.0" text="Numéro du dossier :" />
+            <Label layoutX="343.0" layoutY="63.0" text="Sex :" />
+            <Label layoutX="343.0" layoutY="99.0" text="Numéro d'assurance :" />
+            <TextField layoutX="138.0" layoutY="24.0" />
+            <TextField layoutX="139.0" layoutY="95.0" />
+            <TextField layoutX="489.0" layoutY="24.0" />
+            <TextField layoutX="491.0" layoutY="95.0" />
+            <DatePicker layoutX="138.0" layoutY="58.0" prefHeight="26.0" prefWidth="150.0" />
+            <RadioButton fx:id="radioOptionGesRap1" layoutX="491.0" layoutY="63.0" mnemonicParsing="false" text="Homme" />
+            <RadioButton fx:id="radioOptionGesRap2" layoutX="566.0" layoutY="63.0" mnemonicParsing="false" text="Femme" />
+
+         </children>
+      </AnchorPane>
+      <Label layoutX="84.0" layoutY="441.0" text="Détails du rapport">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="59.0" layoutY="463.0" prefHeight="132.0" prefWidth="682.0">
+         <children>
+            <Label layoutX="16.0" layoutY="28.0" text="Type du rapport :" />
+            <Label layoutX="28.0" layoutY="86.0" text="Diagnostique établi :" />
+            <Label layoutX="349.0" layoutY="36.0" text="Traitement prescrit :" />
+            <Label layoutX="349.0" layoutY="86.0" text="Recomandation :" />
+            <TextField layoutX="138.0" layoutY="24.0" />
+            <TextArea layoutX="468.0" layoutY="22.0" prefHeight="45.0" prefWidth="200.0" />
+            <TextArea layoutX="468.0" layoutY="72.0" prefHeight="45.0" prefWidth="200.0" />
+            <TextArea layoutX="138.0" layoutY="72.0" prefHeight="45.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="46.0" layoutY="626.0" prefHeight="62.0" prefWidth="731.0">
+         <children>
+            <Button layoutX="496.0" layoutY="13.0" mnemonicParsing="false" onAction="#fermerFenetre" text="Précident">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="617.0" layoutY="13.0" mnemonicParsing="false" text="Valider">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
