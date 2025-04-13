@@ -68,12 +68,12 @@
       </AnchorPane>
       <AnchorPane layoutX="46.0" layoutY="626.0" prefHeight="62.0" prefWidth="731.0">
          <children>
-            <Button layoutX="496.0" layoutY="13.0" mnemonicParsing="false" onAction="#fermerFenetre" text="Précident">
+            <Button layoutX="496.0" layoutY="13.0" mnemonicParsing="false" onAction="#fermerFenetre" text="Précédent">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="617.0" layoutY="13.0" mnemonicParsing="false" text="Valider">
+            <Button layoutX="617.0" layoutY="13.0" mnemonicParsing="false" text="Valider" onAction="#validerRapport">
                <font>
                   <Font size="16.0" />
                </font>

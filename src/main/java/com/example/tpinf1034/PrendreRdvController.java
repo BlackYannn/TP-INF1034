@@ -6,10 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
+
 import javafx.scene.control.ToggleGroup;
 
 public class PrendreRdvController {
@@ -55,6 +58,26 @@ public class PrendreRdvController {
             alert.setHeaderText("Impossible d'ouvrir la nouvelle fenêtre");
             alert.setContentText(e.getMessage());
             alert.showAndWait();
+        }
+    }
+
+    @FXML
+    private void reserverRendezVous(ActionEvent event) {
+        // Création de la boîte de dialogue de confirmation
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Confirmer la réservation");
+        alert.setContentText("Êtes-vous sûr de vouloir réserver ce rendez-vous ?");
+
+        // Affichage et attente de la réponse
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK){
+            // L'utilisateur a confirmé
+            System.out.println("Rendez-vous réservé !");
+            // TODO : Ajouter la logique pour enregistrer le rendez-vous ici
+        } else {
+            // L'utilisateur a annulé
+            System.out.println("Réservation annulée.");
         }
     }
 }

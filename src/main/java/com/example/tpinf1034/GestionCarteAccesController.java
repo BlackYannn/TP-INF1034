@@ -6,11 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class GestionCarteAccesController {
     public RadioButton radioOptionGesCar1;
@@ -52,5 +54,48 @@ public class GestionCarteAccesController {
             alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
+    }
+
+
+    public void confirmerEnregistrement(ActionEvent event) {
+        if (afficherConfirmation("Voulez-vous vraiment enregistrer cette carte ?")) {
+            // Logique d'enregistrement ici
+            System.out.println("Carte enregistrée !");
+        }
+    }
+
+    public void confirmerReinitialisation(ActionEvent event) {
+        if (afficherConfirmation("Voulez-vous réinitialiser les champs ?")) {
+            // Réinitialisation des champs
+            System.out.println("Champs réinitialisés !");
+        }
+    }
+
+    public void confirmerSuppression(ActionEvent event) {
+        if (afficherConfirmation("Êtes-vous sûr de vouloir supprimer cette carte ?")) {
+            System.out.println("Carte supprimée !");
+        }
+    }
+
+    public void confirmerImpression(ActionEvent event) {
+        if (afficherConfirmation("Imprimer le badge maintenant ?")) {
+            System.out.println("Badge imprimé !");
+        }
+    }
+
+    public void confirmerDesactivation(ActionEvent event) {
+        if (afficherConfirmation("Désactiver l'accès de cette carte ?")) {
+            System.out.println("Accès désactivé !");
+        }
+    }
+
+    private boolean afficherConfirmation(String message) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        return result.isPresent() && result.get() == ButtonType.OK;
     }
 }

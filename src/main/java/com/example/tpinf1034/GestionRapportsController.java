@@ -5,12 +5,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class GestionRapportsController {
     public RadioButton radioOptionGesRap1;
@@ -51,4 +50,31 @@ public class GestionRapportsController {
             alert.showAndWait();
         }
     }
+
+    @FXML
+    private void validerRapport(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation de validation");
+        alert.setHeaderText("Voulez-vous vraiment valider ce rapport ?");
+        alert.setContentText("Cliquez sur Valider pour confirmer ou Annuler pour revenir.");
+
+        ButtonType buttonValider = new ButtonType("Valider");
+        ButtonType buttonAnnuler = new ButtonType("Annuler", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonValider, buttonAnnuler);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == buttonValider) {
+            // Action à faire si l'utilisateur valide
+            Alert success = new Alert(Alert.AlertType.INFORMATION);
+            success.setTitle("Validation");
+            success.setHeaderText(null);
+            success.setContentText("Le rapport a été validé avec succès !");
+            success.showAndWait();
+        } else {
+            // Action à faire si l'utilisateur annule (optionnel)
+            System.out.println("Validation annulée par l'utilisateur.");
+        }
+    }
+
 }

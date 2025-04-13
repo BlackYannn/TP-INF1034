@@ -59,7 +59,7 @@
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button layoutX="433.0" layoutY="21.0" mnemonicParsing="false" text="Reserver">
+            <Button layoutX="433.0" layoutY="21.0" mnemonicParsing="false" text="Reserver" onAction="#reserverRendezVous">
                <font>
                   <Font size="19.0" />
                </font>
