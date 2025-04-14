@@ -12,19 +12,26 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class GestionCarteAccesController {
-    public RadioButton radioOptionGesCar1;
-    public RadioButton radioOptionGesCar2;
+    @FXML
+    private RadioButton radioActive;
+
+    @FXML
+    private RadioButton radioExpiree;
+
+    @FXML
+    private RadioButton radioSuspendue;
+
+    ToggleGroup statusGroup;
 
 
     private ToggleGroup toggleGroupStatus;
 
     @FXML
     public void initialize() {
-        // Créer un ToggleGroup
-        toggleGroupStatus = new ToggleGroup();
-        // Associer le ToggleGroup aux deux boutons radio
-        radioOptionGesCar1.setToggleGroup(toggleGroupStatus);
-        radioOptionGesCar1.setToggleGroup(toggleGroupStatus);
+        statusGroup = new ToggleGroup();
+        radioActive.setToggleGroup(statusGroup);
+        radioExpiree.setToggleGroup(statusGroup);
+        radioSuspendue.setToggleGroup(statusGroup);
     }
 
     public void fermerFenetre(ActionEvent event) {

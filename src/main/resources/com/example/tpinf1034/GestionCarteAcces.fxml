@@ -77,9 +77,9 @@
             <TextField layoutX="269.0" layoutY="77.0" />
             <TextField layoutX="269.0" layoutY="126.0" />
             <TextField layoutX="270.0" layoutY="175.0" />
-            <RadioButton layoutX="218.0" layoutY="228.0" mnemonicParsing="false" text="Active" />
-            <RadioButton fx:id="radioOptionGesCar1" layoutX="289.0" layoutY="228.0" mnemonicParsing="false" text="Expirée" />
-            <RadioButton fx:id="radioOptionGesCar2" layoutX="365.0" layoutY="228.0" mnemonicParsing="false" text="Suspendue" />
+            <RadioButton fx:id="radioActive" layoutX="218.0" layoutY="228.0" mnemonicParsing="false" text="Active" />
+            <RadioButton fx:id="radioExpiree" layoutX="289.0" layoutY="228.0" mnemonicParsing="false" text="Expirée"  />
+            <RadioButton fx:id="radioSuspendue" layoutX="365.0" layoutY="228.0" mnemonicParsing="false" text="Suspendue" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="31.0" layoutY="618.0" prefHeight="62.0" prefWidth="756.0">
