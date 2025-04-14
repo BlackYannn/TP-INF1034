@@ -5,15 +5,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Optional;
-
-import javafx.scene.control.ToggleGroup;
 
 public class PrendreRdvController {
     public RadioButton radioOption1;
@@ -69,15 +65,28 @@ public class PrendreRdvController {
         alert.setHeaderText("Confirmer la réservation");
         alert.setContentText("Êtes-vous sûr de vouloir réserver ce rendez-vous ?");
 
+        // Boutons personnalisés
+        ButtonType buttonValider = new ButtonType("Valider");
+        ButtonType buttonAnnuler = new ButtonType("Annuler", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonValider, buttonAnnuler);
+
         // Affichage et attente de la réponse
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK){
+        if (result.isPresent() && result.get() == buttonValider) {
             // L'utilisateur a confirmé
             System.out.println("Rendez-vous réservé !");
             // TODO : Ajouter la logique pour enregistrer le rendez-vous ici
+
+            // Message de succès
+            Alert success = new Alert(Alert.AlertType.INFORMATION);
+            success.setTitle("Succès");
+            success.setHeaderText(null);
+            success.setContentText("Le rendez-vous a été réservé avec succès !");
+            success.showAndWait();
         } else {
             // L'utilisateur a annulé
             System.out.println("Réservation annulée.");
         }
     }
+
 }

@@ -5,10 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -59,43 +56,61 @@ public class GestionCarteAccesController {
 
     public void confirmerEnregistrement(ActionEvent event) {
         if (afficherConfirmation("Voulez-vous vraiment enregistrer cette carte ?")) {
-            // Logique d'enregistrement ici
             System.out.println("Carte enregistrée !");
+            afficherSucces("La carte a été enregistrée avec succès !");
         }
     }
 
     public void confirmerReinitialisation(ActionEvent event) {
         if (afficherConfirmation("Voulez-vous réinitialiser les champs ?")) {
-            // Réinitialisation des champs
             System.out.println("Champs réinitialisés !");
+            afficherSucces("Les champs ont été réinitialisés.");
         }
     }
 
     public void confirmerSuppression(ActionEvent event) {
         if (afficherConfirmation("Êtes-vous sûr de vouloir supprimer cette carte ?")) {
             System.out.println("Carte supprimée !");
+            afficherSucces("La carte a été supprimée.");
         }
     }
 
     public void confirmerImpression(ActionEvent event) {
         if (afficherConfirmation("Imprimer le badge maintenant ?")) {
             System.out.println("Badge imprimé !");
+            afficherSucces("Le badge a été imprimé.");
         }
     }
 
     public void confirmerDesactivation(ActionEvent event) {
         if (afficherConfirmation("Désactiver l'accès de cette carte ?")) {
             System.out.println("Accès désactivé !");
+            afficherSucces("L'accès de la carte a été désactivé.");
         }
     }
 
+    // Méthode de confirmation personnalisée avec boutons Valider et Annuler
     private boolean afficherConfirmation(String message) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText(null);
         alert.setContentText(message);
 
+        ButtonType buttonValider = new ButtonType("Valider");
+        ButtonType buttonAnnuler = new ButtonType("Annuler", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonValider, buttonAnnuler);
+
         Optional<ButtonType> result = alert.showAndWait();
-        return result.isPresent() && result.get() == ButtonType.OK;
+        return result.isPresent() && result.get() == buttonValider;
     }
+
+    // Méthode pour afficher un message de succès
+    private void afficherSucces(String message) {
+        Alert success = new Alert(Alert.AlertType.INFORMATION);
+        success.setTitle("Succès");
+        success.setHeaderText(null);
+        success.setContentText(message);
+        success.showAndWait();
+    }
+
 }
