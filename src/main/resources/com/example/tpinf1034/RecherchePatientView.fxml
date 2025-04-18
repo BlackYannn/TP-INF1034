@@ -33,9 +33,9 @@
         <ListView fx:id="patientListView" prefHeight="138.0" prefWidth="779.0" />
 
         <TitledPane text="Détails du patient">
-            <GridPane hgap="10" prefHeight="201.0" prefWidth="792.0" vgap="10">
+            <GridPane hgap="10" prefHeight="282.0" prefWidth="778.0" vgap="10">
                 <Label text="Nom :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <TextField fx:id="detailNom" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <TextField fx:id="detailNom" layoutX="368.0" layoutY="20.0" GridPane.columnIndex="1" />
 
                 <Label text="Âge :" GridPane.rowIndex="2" />
                 <TextField fx:id="detailAge" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -46,32 +46,38 @@
                 <Label text="Dossier :" GridPane.rowIndex="4" />
                 <TextField fx:id="detailDossier" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
+                <Label layoutX="20.0" layoutY="142.0" text="Unité :" GridPane.rowIndex="6" />
+                <TextField fx:id="detailUnite" layoutX="76.0" layoutY="138.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <Label layoutX="20.0" layoutY="188.0" text="Civiere :" GridPane.rowIndex="8" />
+                <TextField fx:id="detailCiviere" layoutX="76.0" layoutY="184.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                <Label layoutX="20.0" layoutY="235.0" text="Autorisation visite :" GridPane.rowIndex="9" />
+                <TextField fx:id="detailVisite" layoutX="76.0" layoutY="231.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+               <Label layoutX="20.0" layoutY="24.0" text="Prenom conjointe " GridPane.columnIndex="4" />
+                <TextField fx:id="detailPrenomConjoint" layoutX="118.0" layoutY="20.0" prefHeight="26.0" prefWidth="151.0" GridPane.columnIndex="5" />
+
+               <Label layoutX="324.0" layoutY="24.0" text="Provenance  :" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <TextField fx:id="detailProvenance" layoutX="368.0" layoutY="66.0" prefHeight="26.0" prefWidth="151.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+
+               <Label layoutX="386.0" layoutY="70.0" text="Destination :" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <TextField fx:id="detailDestination" prefHeight="26.0" prefWidth="151.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+
                 <Label text="Date admission :" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-                <DatePicker fx:id="dateAdmission" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                <TextArea fx:id="detailDateAdmission" prefHeight="0.0" prefWidth="172.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
 
                 <Label prefHeight="18.0" prefWidth="70.0" text="Date départ :" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-                <DatePicker fx:id="dateDepart" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-               <TextField fx:id="detailNom1" layoutX="118.0" layoutY="20.0" GridPane.columnIndex="5" />
-               <Label layoutX="20.0" layoutY="24.0" text="Prenom conjointe " GridPane.columnIndex="4" />
-               <TextField fx:id="detailNom11" layoutX="368.0" layoutY="20.0" GridPane.columnIndex="1" />
-               <Label layoutX="386.0" layoutY="24.0" text="Nom :" />
-               <Label layoutX="324.0" layoutY="24.0" text="Provenance  :" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-               <TextField fx:id="detailNom2" layoutX="368.0" layoutY="66.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-               <Label layoutX="386.0" layoutY="70.0" text="Nom :" />
-               <Label layoutX="386.0" layoutY="70.0" text="Destination :" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-               <TextField fx:id="detailDossier1" layoutX="76.0" layoutY="138.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-               <TextField fx:id="detailDossier11" layoutX="76.0" layoutY="184.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-               <TextField fx:id="detailDossier111" layoutX="76.0" layoutY="231.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-               <Label layoutX="20.0" layoutY="142.0" text="Unité :" GridPane.rowIndex="6" />
-               <Label layoutX="20.0" layoutY="188.0" text="Civiere :" GridPane.rowIndex="8" />
-               <Label layoutX="20.0" layoutY="235.0" text="Autorisation visite :" GridPane.rowIndex="9" />
-               <columnConstraints>
+                <TextArea fx:id="detailDateDepart" prefHeight="11.0" prefWidth="171.0" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+
+
+                <columnConstraints>
                   <ColumnConstraints />
                   <ColumnConstraints />
                   <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
                   <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
                   <ColumnConstraints />
-                  <ColumnConstraints />
+                  <ColumnConstraints fillWidth="false" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints />

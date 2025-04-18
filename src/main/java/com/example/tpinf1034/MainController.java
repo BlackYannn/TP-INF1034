@@ -182,7 +182,7 @@ public class MainController {
 
             // Créer une nouvelle fenêtre (Stage)
             Stage newStage = new Stage();
-            newStage.setTitle("Connesion");
+            newStage.setTitle("Connexion");
             newStage.setScene(newScene);
             newStage.show();
 
