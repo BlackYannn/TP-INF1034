@@ -10,7 +10,7 @@
 <top>
     <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Recherche de patient" />
 </top>
-   <left>
+   <center>
     <VBox prefHeight="700.0" prefWidth="800.0" spacing="10" BorderPane.alignment="CENTER">
 
         <padding>
@@ -22,7 +22,7 @@
             <TextField fx:id="nomField" />
             <Label text="Prénom :" />
             <TextField fx:id="prenomField" />
-            <Button fx:id="btnRecherche" onAction="#recherchePatient" text="Rechercher" />
+            <Button fx:id="btnRecherche" onAction="#recherchePatient" text="Rechercher" defaultButton="true"/>
         </HBox>
          <Label prefHeight="26.0" prefWidth="139.0" text="Liste des patients">
             <font>
@@ -95,7 +95,7 @@
         </TitledPane>
         <AnchorPane prefHeight="107.0" prefWidth="779.0">
             <children>
-               <Button fx:id="btnFermer" layoutX="598.0" layoutY="40.0" onAction="#fermerFenetre" text="Précédent">
+               <Button fx:id="btnFermer" layoutX="598.0" layoutY="40.0" onAction="#fermerFenetre" text="Précédent" >
                    <font>
                        <Font size="20.0" />
                    </font>
@@ -103,5 +103,5 @@
             </children>
         </AnchorPane>
     </VBox>
-   </left>
+   </center>
 </BorderPane>

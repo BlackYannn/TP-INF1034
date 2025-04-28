@@ -12,10 +12,17 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class PrendreRdvController {
-    public RadioButton radioOption1;
-    public RadioButton radioOption2;
-    public RadioButton radioOption3;
-    public RadioButton radioOption4;
+    public TextField nom;
+    public DatePicker dateNaissance;
+    public RadioButton sexHomme;
+    public RadioButton sexFemme;
+    public TextField telephone;
+    public TextField email;
+    public DatePicker dateRdv;
+    public TextField motif;
+    public RadioButton urgentOui;
+    public RadioButton urgentNon;
+
     private ToggleGroup toggleGroupSex;
     private ToggleGroup toggleGroupUrgent;
 
@@ -25,10 +32,10 @@ public class PrendreRdvController {
         toggleGroupSex = new ToggleGroup();
         toggleGroupUrgent = new ToggleGroup();
         // Associer le ToggleGroup aux deux boutons radio
-        radioOption1.setToggleGroup(toggleGroupSex);
-        radioOption2.setToggleGroup(toggleGroupSex);
-        radioOption3.setToggleGroup(toggleGroupUrgent);
-        radioOption4.setToggleGroup(toggleGroupUrgent);
+        sexHomme.setToggleGroup(toggleGroupSex);
+        sexFemme.setToggleGroup(toggleGroupSex);
+        urgentOui.setToggleGroup(toggleGroupUrgent);
+        urgentNon.setToggleGroup(toggleGroupUrgent);
     }
 
     public void fermerFenetre(ActionEvent event) {
@@ -56,6 +63,47 @@ public class PrendreRdvController {
             alert.showAndWait();
         }
     }
+
+    @FXML
+    private void confirmer(ActionEvent event) {
+        StringBuilder champsManquants = new StringBuilder();
+
+        if (nom.getText().isEmpty()) {
+            champsManquants.append("- Nom\n");
+        }
+        if (dateNaissance.getValue() == null) {
+            champsManquants.append("- Date de naissance\n");
+        }
+        if (toggleGroupSex.getSelectedToggle() == null) {
+            champsManquants.append("- Sexe\n");
+        }
+        if (telephone.getText().isEmpty()) {
+            champsManquants.append("- Téléphone\n");
+        }
+        if (email.getText().isEmpty()) {
+            champsManquants.append("- Email\n");
+        }
+        if (dateRdv.getValue() == null) {
+            champsManquants.append("- Date du rendez-vous\n");
+        }
+        if (motif.getText().isEmpty()) {
+            champsManquants.append("- Motif\n");
+        }
+        if (toggleGroupUrgent.getSelectedToggle() == null) {
+            champsManquants.append("- Urgent\n");
+        }
+
+        if (!champsManquants.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Champs obligatoires manquants");
+            alert.setHeaderText("Veuillez remplir les champs suivants :");
+            alert.setContentText(champsManquants.toString());
+            alert.showAndWait();
+        } else {
+            reserverRendezVous(event);
+        }
+    }
+
 
     @FXML
     private void reserverRendezVous(ActionEvent event) {

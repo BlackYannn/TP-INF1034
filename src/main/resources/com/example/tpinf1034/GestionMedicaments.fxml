@@ -20,7 +20,7 @@
             </Label>
             <TextField layoutX="125.0" layoutY="42.0" />
             <TextField layoutX="400.0" layoutY="42.0" />
-            <Button layoutX="613.0" layoutY="36.0" mnemonicParsing="false" text="Recherche">
+            <Button layoutX="613.0" layoutY="36.0" mnemonicParsing="false" text="Recherche" defaultButton="true">
                <font>
                   <Font size="14.0" />
                </font>

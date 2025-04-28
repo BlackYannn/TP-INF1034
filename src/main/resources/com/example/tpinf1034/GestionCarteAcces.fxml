@@ -57,7 +57,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="410.0" layoutY="336.0" mnemonicParsing="false" text="Enregistrer" onAction="#confirmerEnregistrement">
+            <Button layoutX="410.0" layoutY="336.0" mnemonicParsing="false" text="Enregistrer" onAction="#confirmerEnregistrement" defaultButton="true">
                <font>
                   <Font size="16.0" />
                </font>
@@ -67,7 +67,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="179.0" layoutY="336.0" mnemonicParsing="false" text="Supprimer" onAction="#confirmerSuppression">
+            <Button layoutX="179.0" layoutY="336.0" mnemonicParsing="false" text="Supprimer" onAction="#confirmerSuppression" style="-fx-background-color: #d32f2f; -fx-text-fill: white;">
                <font>
                   <Font size="16.0" />
                </font>
@@ -89,7 +89,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="393.0" layoutY="13.0" mnemonicParsing="false" text="Désactiver accès" onAction="#confirmerDesactivation">
+            <Button layoutX="393.0" layoutY="13.0" mnemonicParsing="false" text="Désactiver accès" onAction="#confirmerDesactivation" style="-fx-background-color: #d32f2f; -fx-text-fill: white;">
                <font>
                   <Font size="16.0" />
                </font>

@@ -8,48 +8,56 @@
    <children>
       <AnchorPane layoutX="80.0" layoutY="29.0" prefHeight="342.0" prefWidth="439.0">
          <children>
+
             <Label layoutX="15.0" layoutY="14.0" text="Nom complet :">
                <font>
                   <Font size="20.0" />
                </font></Label>
+            <TextField fx:id="nom" layoutX="238.0" layoutY="17.0" prefHeight="26.0" prefWidth="191.0" />
+
             <Label layoutX="14.0" layoutY="52.0" text="Date de naissance :">
                <font>
                   <Font size="20.0" />
                </font></Label>
+            <DatePicker fx:id="dateNaissance" layoutX="238.0" layoutY="55.0" prefHeight="26.0" prefWidth="191.0" />
+
             <Label layoutX="17.0" layoutY="89.0" text="Sex :">
                <font>
                   <Font size="20.0" />
                </font></Label>
+            <RadioButton fx:id="sexHomme" layoutX="238.0" layoutY="96.0" mnemonicParsing="false" text="Homme" />
+            <RadioButton fx:id="sexFemme" layoutX="334.0" layoutY="96.0" mnemonicParsing="false" text="Femme" />
+
             <Label layoutX="15.0" layoutY="140.0" text="Numéro de téléphone :">
                <font>
                   <Font size="20.0" />
                </font></Label>
+            <TextField fx:id="telephone" layoutX="238.0" layoutY="142.0" prefHeight="26.0" prefWidth="191.0" />
+
             <Label layoutX="16.0" layoutY="171.0" text="Adresse e-mail :">
                <font>
                   <Font size="20.0" />
                </font></Label>
+            <TextField fx:id="email" layoutX="238.0" layoutY="173.0" prefHeight="26.0" prefWidth="191.0" />
+
             <Label layoutX="17.0" layoutY="218.0" text="Date de réservation :">
                <font>
                   <Font size="20.0" />
                </font></Label>
+            <DatePicker fx:id="dateRdv" layoutX="238.0" layoutY="220.0" prefHeight="26.0" prefWidth="191.0" />
+
             <Label layoutX="15.0" layoutY="259.0" text="Motif de consultation : ">
                <font>
                   <Font size="20.0" />
                </font></Label>
+            <TextField fx:id="motif" layoutX="238.0" layoutY="261.0" prefHeight="26.0" prefWidth="191.0" />
+
             <Label layoutX="15.0" layoutY="297.0" text="Urgent :">
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <TextField layoutX="238.0" layoutY="17.0" prefHeight="26.0" prefWidth="191.0" />
-            <TextField layoutX="238.0" layoutY="261.0" prefHeight="26.0" prefWidth="191.0" />
-            <TextField layoutX="238.0" layoutY="173.0" prefHeight="26.0" prefWidth="191.0" />
-            <TextField layoutX="238.0" layoutY="142.0" prefHeight="26.0" prefWidth="191.0" />
-            <DatePicker layoutX="238.0" layoutY="55.0" prefHeight="26.0" prefWidth="191.0" />
-            <DatePicker layoutX="238.0" layoutY="220.0" prefHeight="26.0" prefWidth="191.0" />
-            <RadioButton fx:id="radioOption1" layoutX="238.0" layoutY="96.0" mnemonicParsing="false" text="Homme" />
-            <RadioButton fx:id="radioOption2" layoutX="334.0" layoutY="96.0" mnemonicParsing="false" text="Femme" />
-            <RadioButton fx:id="radioOption3" layoutX="241.0" layoutY="304.0" mnemonicParsing="false" text="Oui" />
-            <RadioButton fx:id="radioOption4" layoutX="334.0" layoutY="304.0" mnemonicParsing="false" text="Non" />
+            <RadioButton fx:id="urgentOui" layoutX="241.0" layoutY="304.0" mnemonicParsing="false" text="Oui" />
+            <RadioButton fx:id="urgentNon" layoutX="334.0" layoutY="304.0" mnemonicParsing="false" text="Non" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="20.0" layoutY="371.0" prefHeight="79.0" prefWidth="558.0">
@@ -59,7 +67,7 @@
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button layoutX="433.0" layoutY="21.0" mnemonicParsing="false" text="Reserver" onAction="#reserverRendezVous">
+            <Button layoutX="433.0" layoutY="21.0" mnemonicParsing="false" text="Reserver" onAction="#confirmer" defaultButton="true">
                <font>
                   <Font size="19.0" />
                </font>

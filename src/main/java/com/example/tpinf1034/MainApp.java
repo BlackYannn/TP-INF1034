@@ -25,13 +25,4 @@ public class MainApp extends Application {
         launch();
     }
 
-    public  void creerPatient() {
-        // Création de trois objets Patient
-        Patient patient1 = new Patient("Dupont", "Jean", 45, "Homme", "D12345", "C1", true);
-        Patient patient2 = new Patient("Lavoie", "Sophie", 32, "Femme", "D67890", "C2", false);
-        Patient patient3 = new Patient("Tremblay", "Marc", 60, "Homme", "D54321", "C3", true);
-        listePatient.add(patient1);
-        listePatient.add(patient2);
-        listePatient.add(patient3);
-    }
 }

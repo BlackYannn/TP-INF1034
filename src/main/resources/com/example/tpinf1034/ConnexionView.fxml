@@ -28,11 +28,11 @@
                   <Font size="20.0" />
                </font>
             </PasswordField>
-            <Label layoutX="161.0" layoutY="215.0" onMouseClicked="#handleForgotPassword" style="-fx-text-fill: blue; -fx-underline: true; -fx-cursor: hand;" text="Mot de passe oublier ?">
+            <Label layoutX="161.0" layoutY="215.0" onMouseClicked="#handleForgotPassword" style="-fx-text-fill: blue; -fx-underline: true; -fx-cursor: hand;" text="Mot de passe oublié ?">
                <font>
                   <Font size="15.0" />
                </font></Label>
-            <Button layoutX="157.0" layoutY="266.0" mnemonicParsing="false" onAction="#connecter" style="-fx-background-color: blue;" text="Se Connecter" textFill="WHITE">
+            <Button layoutX="157.0" layoutY="266.0" mnemonicParsing="false" onAction="#connecter" style="-fx-background-color: blue;" text="Se Connecter" textFill="WHITE"  defaultButton="true">
                <font>
                   <Font size="22.0" />
                </font>
